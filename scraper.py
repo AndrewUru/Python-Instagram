@@ -1,7 +1,6 @@
-# scraper.py
 import re
-import instaloader
 from typing import Optional, List, Dict, Tuple
+import instaloader
 import httpx
 from bs4 import BeautifulSoup
 
@@ -35,9 +34,9 @@ def create_loader_anonymous() -> instaloader.Instaloader:
     )
 
 def fetch_emails_from_url(url: str, timeout: float = 10.0) -> Tuple[List[str], List[str]]:
+    """Busca emails en la URL (HTML + mailto:) y sigue hasta 5 enlaces de primer nivel."""
     emails: List[str] = []
     sources: List[str] = []
-
     if not url:
         return emails, sources
 
@@ -74,7 +73,6 @@ def fetch_emails_from_url(url: str, timeout: float = 10.0) -> Tuple[List[str], L
                             sources.append(link)
                 except Exception:
                     continue
-
     except Exception:
         return sorted(set(emails)), sorted(set(sources))
 
@@ -89,7 +87,6 @@ def get_public_profile_data_anonymous(L: instaloader.Instaloader, url_or_usernam
 
     bio_emails = extract_emails(bio)
     ext_emails, ext_sources = fetch_emails_from_url(external_url) if external_url else ([], [])
-
     emails = sorted(set(bio_emails + ext_emails))
 
     return {
