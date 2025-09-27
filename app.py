@@ -430,7 +430,7 @@ def show_info_box(content: str, box_type: str = "info"):
 # =========================
 st.markdown("""
 <div class="header-container">
-    <div class="main-title">📧 Instagram Email Collector</div>
+    <div class="main-title">Instagram Email Collector</div>
     <div class="subtitle">Extrae emails públicos de manera ética y responsable</div>
     <div class="feature-badges">
         <span class="badge">🔒 Sin Login</span>
