@@ -1,0 +1,65 @@
+{
+  "data": {
+    "user": {
+      "username": "NotJustAnalytics",
+      "full_name": "Not Just Analytics",
+      "biography": "Bio de ejemplo. Contacto: hello@example.com",
+      "external_url": "https://example.com",
+      "is_private": false,
+      "is_verified": true,
+      "profile_pic_url_hd": "https://example.com/profile.jpg",
+      "edge_followed_by": {
+        "count": 12345
+      },
+      "edge_follow": {
+        "count": 678
+      },
+      "edge_owner_to_timeline_media": {
+        "count": 100,
+        "edges": [
+          {
+            "node": {
+              "shortcode": "ABC123",
+              "is_video": false,
+              "display_url": "https://example.com/post1.jpg",
+              "accessibility_caption": "Image may contain: text",
+              "taken_at_timestamp": 1700000000,
+              "edge_media_to_comment": {
+                "count": 10
+              },
+              "edge_liked_by": {
+                "count": 200
+              },
+              "edge_media_to_caption": {
+                "edges": [
+                  {
+                    "node": {
+                      "text": "Hola mundo"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "node": {
+              "shortcode": "DEF456",
+              "is_video": true,
+              "display_url": "https://example.com/post2.jpg",
+              "taken_at_timestamp": 1700003600,
+              "edge_media_to_comment": {
+                "count": 5
+              },
+              "edge_media_preview_like": {
+                "count": 150
+              },
+              "caption": "Caption fallback"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "status": "ok"
+}
+
